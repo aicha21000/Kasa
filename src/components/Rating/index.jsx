@@ -4,8 +4,10 @@ import { FaStar } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const RatingDiv = styled.div`
-width: 45%;
+width: 100%;
 text-align: right;
+@media (max-width: 768px) {
+text-align: left;  
 
 `;
 

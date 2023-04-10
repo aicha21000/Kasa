@@ -17,7 +17,7 @@ import GlobalStyle from '../../../utils/GlobalStyle';
   color: #444;
   cursor: pointer;
   transition: 0.4s;
-  margin: 20px;
+  margin: 0;
   @media (max-width: 768px) {
     width: 100%;
     };
@@ -33,7 +33,7 @@ import GlobalStyle from '../../../utils/GlobalStyle';
       border-radius: 10px;
       z-index: 1;
       padding: 0;
-      margin: 0 0  20px 0;
+      margin: 0;
       cursor: pointer;
 }
 h3 {
@@ -52,8 +52,8 @@ h3 {
   background-color: #F7F7F7;
   overflow: hidden;
   height: 200px;
-border-radius: 5px;
-top: -30px;
+  border-radius: 5px;
+  top: 0px;
 }
 ul {
   list-style-type: none;

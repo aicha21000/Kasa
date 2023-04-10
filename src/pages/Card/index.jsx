@@ -32,7 +32,7 @@ justify-content: start;
   };
 `
 const TitleLocation = styled.div`
-width: 50%;
+width: 100%;
 display: flex;
 flex-direction: column;
 align-items: start;
@@ -42,7 +42,6 @@ justify-content: start;
   };
 `
 const Titre = styled.h1`
-position: relative;
 
 font-family: ${GlobalStyle.text.font};
 font-style: normal;
@@ -50,7 +49,7 @@ font-weight: 500;
 font-size: 36px;
 line-height: 142.6%;
 /* or 51px */
-display: flex;
+margin: 0;
 align-items: flex-end;
 color: ${GlobalStyle.colors.primary};
 @media (max-width: 768px) {
@@ -59,7 +58,6 @@ color: ${GlobalStyle.colors.primary};
 `
 const Location = styled.h2`
 flex: 1;
-position: relative;
 left: 6.94%;
 right: 80.83%;
 top: 60.94%;
@@ -68,15 +66,16 @@ font-family: ${GlobalStyle.text.font};
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
+text-align: left;
 line-height: 142.6%;
 /* identical to box height, or 26px */
 display: flex;
-align-items: flex-end;
+align-items: start;
 color: ${GlobalStyle.colors.primary};
-
+margin: 0;
+padding: 0;
 @media (max-width: 768px) {
   width: 100%;
-  color: black
   };
 `
 
@@ -92,7 +91,7 @@ justify-content: space-between;
   };
 `
 const HostName = styled.div`
-width: 50%;
+width: 100%;
 top: 573px;
 display: flex;
 flex-direction: row;
@@ -121,12 +120,26 @@ color: #FF6060;
   display: inline-block;
 }
 `
+const More = styled.div`
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+@media (max-width: 768px) {
+  flex-direction: column;
 
+  width: 100%;
+  };
+`
 
 function Card() {
 const { logName } = useParams()
 const logements = require('../About/logements.json')
  const logement = logements.find(logement => logement.id === logName)
+ if (!logement) {
+  return <div>Logement introuvable</div>
+ }
 
     return (
       <div>
@@ -146,8 +159,10 @@ const logements = require('../About/logements.json')
         </HostName>
         <Rating />
         </TagsHost>
+        <More>
         <Description />
         <Equipments />
+        </More>
   </ContentPage>
 
       </div>
