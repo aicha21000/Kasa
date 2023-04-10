@@ -61,9 +61,9 @@ function Home() {
         <CardWrapper>
 
         {logements.map((id, index) => (
-          <Link to={`/fiche/${id.id}`}>
+          <Link to={`/fiche/${id.id}`} key={`${id.name}-${index}`}>
             <CardStyle
-                key={`${id.name}-${index}`}
+                
                 cover={id.cover}
                 title={id.title}
                 picture={id.cover}

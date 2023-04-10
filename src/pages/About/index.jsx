@@ -105,8 +105,8 @@ const About = () => {
 
 
       
-      {data.map((element, index) => ( <div> 
-        <div key={index} className="dropdown-header" onClick={() => toggleDropdown(index)}>
+      {data.map((element, index) => ( <div  key={`${element.name}-${index}`}> 
+        <div className="dropdown-header" onClick={() => toggleDropdown(index)}>
           <h3>{element.title}</h3>
           {selectedElement === index ? <Open className="open" /> : <Close className="close" />}</div>
           {selectedElement === index && (

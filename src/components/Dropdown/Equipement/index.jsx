@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { ReactComponent as Open} from '../../../assets/images/Open.svg';
 import { ReactComponent as Close} from '../../../assets/images/Close.svg';
 import styled from 'styled-components';
+import GlobalStyle from '../../../utils/GlobalStyle';
 
 
 
@@ -15,10 +16,11 @@ import styled from 'styled-components';
   flex-direction: column;
   color: #444;
   cursor: pointer;
-
   transition: 0.4s;
   margin: 20px;
-  
+  @media (max-width: 768px) {
+    width: 100%;
+    };
 .dropdown-header {
   width: 100%;
   position: relative;
@@ -35,6 +37,7 @@ import styled from 'styled-components';
       cursor: pointer;
 }
 h3 {
+  font-family: ${GlobalStyle.text.font};
   padding: 0 10px;     
 }
 

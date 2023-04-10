@@ -1,11 +1,12 @@
 import { BrowserRouter, Link } from 'react-router-dom';
 import LOGO from "../../assets/images/LOGO.svg";
 import styled from 'styled-components';
+import GlobalStyle from '../../utils/GlobalStyle';
 
 const Nav = styled.nav`
   width: 90%;
   height: 80px;
-  background-color: #F6F6F6;
+  background-color: ${GlobalStyle.colors.secondary};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,7 +28,7 @@ const Nav = styled.nav`
       Top: 17px;
       Left: 931px;
       a {
-        font: Montserrat;
+        font-family: ${GlobalStyle.text.font};
         color: #FF6060;
         line-height: 34.22px;
         text-decoration: none;
@@ -46,9 +47,12 @@ const Nav = styled.nav`
 
 
 function Header() {
+    const handleClick = () => {
+    window.location.href = "/";
+  };
     return (
       <Nav>
-           <img src={LOGO} alt="logo" />
+           <img src={LOGO} alt="logo" onClick={handleClick}/>
 
         <ul>
           <li>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import CardStyle from "../../components/CardStyle"
 import styled from "styled-components"
 import Carrousel from "../../components/Carrousel"
 import { useParams } from "react-router-dom"
@@ -17,17 +16,30 @@ margin: 0 auto;
 background-color: ${GlobalStyle.colors.background};
 display: flex;
 flex-wrap: wrap;
-
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+
 `  
+const Info = styled.div`
+width: 50%;
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: start;
+@media (max-width: 768px) {
+  width: 100%
+  };
+`
 const TitleLocation = styled.div`
 width: 50%;
 display: flex;
 flex-direction: column;
 align-items: start;
 justify-content: start;
+@media (max-width: 768px) {
+  width: 100%
+  };
 `
 const Titre = styled.h1`
 position: relative;
@@ -41,6 +53,9 @@ line-height: 142.6%;
 display: flex;
 align-items: flex-end;
 color: ${GlobalStyle.colors.primary};
+@media (max-width: 768px) {
+  width: 100%
+  };
 `
 const Location = styled.h2`
 flex: 1;
@@ -58,9 +73,24 @@ line-height: 142.6%;
 display: flex;
 align-items: flex-end;
 color: ${GlobalStyle.colors.primary};
+
+@media (max-width: 768px) {
+  width: 100%;
+  color: black
+  };
 `
 
-
+const TagsHost = styled.div`
+width: 50%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+@media (max-width: 768px) {
+  flex-direction: row-reverse;
+  width: 100%;
+  };
+`
 const HostName = styled.div`
 width: 50%;
 top: 573px;
@@ -102,17 +132,20 @@ const logements = require('../About/logements.json')
       <div>
    <Carrousel />
   <ContentPage>
-        <TitleLocation>
+        <Info>
+      <TitleLocation >
        <Titre> {logement.title} </Titre>
         <Location> {logement.location }</Location>
         </TitleLocation>
-        <HostName>
+         <Tags />
+         </Info>
+        <TagsHost>
+          <HostName>
         <p> {logement.host.name}</p>
-        <span class="dot"></span>
+        <span className="dot"></span>
         </HostName>
-        <Tags />
-        
         <Rating />
+        </TagsHost>
         <Description />
         <Equipments />
   </ContentPage>

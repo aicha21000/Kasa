@@ -16,7 +16,9 @@ const CardWrapper = styled.div`
     transition: all 0.3s ease-in-out;
     align-items: center;
     justify-content: center;
-
+    media (max-width: 768px) {
+        width: 90%
+        };
 
 `
 const CardTitle = styled.h2`

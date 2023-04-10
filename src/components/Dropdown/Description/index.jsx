@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { ReactComponent as Open} from '../../../assets/images/Open.svg';
 import { ReactComponent as Close} from '../../../assets/images/Close.svg';
 import styled from 'styled-components';
+import GlobalStyle from '../../../utils/GlobalStyle';
 
 const Dropdown = styled.div`
   width : 45%;
@@ -14,6 +15,9 @@ const Dropdown = styled.div`
 
   transition: 0.4s;
   margin: 20px;
+  @media (max-width: 768px) {
+    width: 100%;
+    };
   
 .dropdown-header {
   width: 100%;
@@ -31,6 +35,7 @@ const Dropdown = styled.div`
       cursor: pointer;
 }
 h3 {
+  font-family: ${GlobalStyle.text.font};
   padding: 0 10px;     
 }
 
@@ -46,7 +51,7 @@ h3 {
   overflow: hidden;
   height: 200px;
 border-radius: 5px;
-top: -30px;
+top: -10px;
 }
 ul {
   list-style-type: none;

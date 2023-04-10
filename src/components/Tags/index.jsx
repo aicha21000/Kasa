@@ -23,6 +23,7 @@ const TagDiv = styled.div`
         padding: 0;
         background-color: #F6F6F6;
         li {
+            font-family: ${GlobalStyle.text.font};
             margin: 0 5px;
             position: relative;
             width: 115px;

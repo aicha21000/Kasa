@@ -3,6 +3,7 @@ import React from 'react';
 import LOGO from '../../assets/images/LogoWhite.svg';
 
 import styled from 'styled-components';
+import GlobalStyle from '../../utils/GlobalStyle';
 
 const FooterDiv = styled.div`
 
@@ -21,7 +22,7 @@ img {
 p {
   color: #fff;
   Font-size: 24px;
-  font: montserrat;
+  font-family: ${GlobalStyle.text.font};
 `;
 
 function Footer() {
