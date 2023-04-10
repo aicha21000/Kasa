@@ -8,20 +8,19 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Error'
 
-import {createGlobalStyle} from 'styled-components'
+// import from 'styled-components'
 
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 20px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-  }
-`
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     margin: 20px;
+//     padding: 0;
+//     box-sizing: border-box;
+//     font-family: 'Roboto', sans-serif;
+//   }
+// `
 ReactDOM.render(
   <React.StrictMode>
-      <GlobalStyle />
       <BrowserRouter>
       <Header />
       <Routes>

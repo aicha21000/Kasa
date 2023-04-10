@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-
+import GlobalStyle from '../../utils/GlobalStyle';
 
 const TagDiv = styled.div`
 
@@ -27,7 +27,7 @@ const TagDiv = styled.div`
             position: relative;
             width: 115px;
             height: 25px;
-            background: #FF6060;
+            background: ${GlobalStyle.colors.primary};
             border-radius: 10px;
             list-style: none;
             border-radius: 10px;

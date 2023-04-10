@@ -13,7 +13,6 @@ const BannerWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  color : #FFFFFF;
   opacity: 30%;
   blend: Darken;
 

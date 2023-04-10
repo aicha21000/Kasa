@@ -7,13 +7,14 @@ import Rating from "../../components/Rating"
 import Description from "../../components/Dropdown/Description"
 import Equipments from "../../components/Dropdown/Equipement"
 import Tags from "../../components/Tags"
+import GlobalStyle from "../../utils/GlobalStyle"
 
 const ContentPage = styled.div`
 position: relative;
 width: 90%; 
 height: 100%;
 margin: 0 auto;
-background-color: #E5E5E5;
+background-color: ${GlobalStyle.colors.background};
 display: flex;
 flex-wrap: wrap;
 
@@ -31,7 +32,7 @@ justify-content: start;
 const Titre = styled.h1`
 position: relative;
 
-font: 'Montserrat';
+font-family: ${GlobalStyle.text.font};
 font-style: normal;
 font-weight: 500;
 font-size: 36px;
@@ -39,7 +40,7 @@ line-height: 142.6%;
 /* or 51px */
 display: flex;
 align-items: flex-end;
-color: #FF6060;
+color: ${GlobalStyle.colors.primary};
 `
 const Location = styled.h2`
 flex: 1;
@@ -48,7 +49,7 @@ left: 6.94%;
 right: 80.83%;
 top: 60.94%;
 bottom: 36.52%;
-font-family: 'Montserrat';
+font-family: ${GlobalStyle.text.font};
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
@@ -56,7 +57,7 @@ line-height: 142.6%;
 /* identical to box height, or 26px */
 display: flex;
 align-items: flex-end;
-color: #FF6060;
+color: ${GlobalStyle.colors.primary};
 `
 
 
@@ -71,7 +72,7 @@ align-items: flex-end;
 text-align: right;
 
 p {
-family: 'Montserrat';
+font-family: ${GlobalStyle.text.font};
 width: 80px;
 padding: 10px;
 font-style: normal;
