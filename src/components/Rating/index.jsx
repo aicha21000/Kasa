@@ -22,11 +22,11 @@ function Rating() {
   const empty = [];
 
   for (let i = 0; i < starNumber; i++) {
-    stars.push(<FaStar style={{color :'#FF6060', fontSize: '30px', width: '40px'}} key={i} />);
+    stars.push(<FaStar style={{color :'#FF6060', fontSize: '26px', width: '40px'}} key={i} />);
   }
   
   for (let i = 0; i < emptyStars; i++) {
-    empty.push(<FaStar style={{color :'#bbb', fontSize: '30px', width: '40px'}} key={i} />);
+    empty.push(<FaStar style={{color :'#bbb', fontSize: '26px', width: '40px'}} key={i} />);
   }
 
   return <RatingDiv>{stars}{empty}</RatingDiv>;

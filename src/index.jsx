@@ -7,7 +7,6 @@ import Cards from './pages/Card'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Error'
-import ErrorPage from './components/ErrorPage'
 
 // import from 'styled-components'
 
@@ -29,8 +28,7 @@ ReactDOM.render(
       <Route exact path="/about" element={<About />} />
       <Route exact path="/fiche/:logName" element={<Cards />} />
 
-      {/* <Route path="*" element={<Error />} /> */}
-      <Route path="*" element={<ErrorPage />} />
+      <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
       </BrowserRouter>

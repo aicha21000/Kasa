@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import GlobalStyle from '../../utils/GlobalStyle'
 
 const ErrorDiv = styled.div`
   position: relative;
-
+  padding: 20px;
   width: 100%;
   height: 100%;
   background: #E5E5E5;
@@ -17,15 +18,10 @@ const ErrorDiv = styled.div`
     width: 597px;
     height: 263px;
     margin: 50px 0  20px 0;
-
-    
-    font: 'Montserrat';
+    font-family: ${GlobalStyle.text.font};
     font-style: normal;
     font-weight: 700;
     font-size: 288px ;
-
-
-    display: flex;
     align-items: center;
     text-align: center;
     
@@ -34,8 +30,7 @@ const ErrorDiv = styled.div`
   p {
     position: relative;
     
-    font: 'Montserrat';
-    font-weight: 500;
+    font-family: ${GlobalStyle.text.font};    font-weight: 500;
     font-size: 36px;
     line-height: 142.6%;
 
@@ -50,7 +45,7 @@ const ErrorDiv = styled.div`
     position: relative;
     font-size: 18px;
     
-    font: 'Montserrat';
+    font-family: ${GlobalStyle.text.font};
     font-style: normal;
     font-weight: 500;
 

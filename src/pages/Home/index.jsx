@@ -2,13 +2,13 @@ import { Link } from "react-router-dom"
 import Banner from "../../components/Banner"
 import CardStyle from "../../components/CardStyle"
 import styled from "styled-components"
-import { useParams } from "react-router-dom"
 
 
 
 
 
 const HomeWrapper = styled.div`
+
   width: 100%;
   height: 100%;
   margin: 0 auto;

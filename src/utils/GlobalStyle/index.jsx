@@ -1,3 +1,5 @@
+
+
 const GlobalStyle = {
     colors: {
         primary: "#ff6060",
@@ -6,7 +8,7 @@ const GlobalStyle = {
         text: "#000000",
     },
     text: {
-        font: "arial",
+        font: 'montserrat, sans-serif',
         color: "black",
         fontStyle: "normal"
 

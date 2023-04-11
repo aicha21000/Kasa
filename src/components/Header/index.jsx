@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import GlobalStyle from '../../utils/GlobalStyle';
 
 const Nav = styled.nav`
-  width: 90%;
+img {
+  cursor: pointer;
+}
+
   height: 80px;
   background-color: ${GlobalStyle.colors.secondary};
   display: flex;
@@ -12,7 +15,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 0 20px 0;
   box-sizing: border-box;
-  margin: 0 auto;
+  padding: 20px;
   img {
     width: 210.32px;
     height: 68;
@@ -29,6 +32,7 @@ const Nav = styled.nav`
       Left: 931px;
       a {
         font-family: ${GlobalStyle.text.font};
+        font-style: ${GlobalStyle.text.fontStyle}, sans-serif;
         color: #FF6060;
         line-height: 34.22px;
         text-decoration: none;

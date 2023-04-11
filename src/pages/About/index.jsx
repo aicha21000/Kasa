@@ -5,6 +5,7 @@ import data from '../../components/data/data.json';
 
 import styled from 'styled-components';
 import Background  from '../../assets/images/Background.png';
+import GlobalStyle from '../../utils/GlobalStyle';
 
 const AboutPage = styled.div`
   
@@ -38,6 +39,7 @@ position: relative;
 .dropdown-header {
   width: 100%;
   position: relative;
+  font-family: ${GlobalStyle.text.font};
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -69,7 +71,8 @@ h3 {
   position: relative;
   width: 100%;
   color: #FF6060;
-  font : montserrat;
+  font-family: ${GlobalStyle.text.font};
+  line-height: 2;
   font-size : 18px;
   margin: 0;
   padding: 0;

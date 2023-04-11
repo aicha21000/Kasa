@@ -22,11 +22,13 @@ justify-content: space-between;
 
 `  
 const Info = styled.div`
+position: relative;
 width: 50%;
 display: flex;
 flex-direction: column;
 align-items: start;
 justify-content: start;
+margin: 0 0 20px 0;
 @media (max-width: 768px) {
   width: 100%
   };
@@ -37,6 +39,7 @@ display: flex;
 flex-direction: column;
 align-items: start;
 justify-content: start;
+margin: 0 0 20px 0;
 @media (max-width: 768px) {
   width: 100%
   };
@@ -79,12 +82,13 @@ padding: 0;
   };
 `
 
-const TagsHost = styled.div`
+const TagsRate = styled.div`
 width: 50%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
+margin: 0 0 20px 0;
 @media (max-width: 768px) {
   flex-direction: row-reverse;
   width: 100%;
@@ -113,14 +117,16 @@ line-height: 142.6%;
 
 color: #FF6060;
 .dot {
-  height: 90px;
-  width: 90px;
+  align-self: center;
+  height: 60px;
+  width: 60px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
 }
 `
 const More = styled.div`
+position: relative;
 width: 100%;
 display: flex;
 flex-direction: row;
@@ -152,13 +158,13 @@ const logements = require('../About/logements.json')
         </TitleLocation>
          <Tags />
          </Info>
-        <TagsHost>
+        <TagsRate>
           <HostName>
         <p> {logement.host.name}</p>
         <span className="dot"></span>
         </HostName>
         <Rating />
-        </TagsHost>
+        </TagsRate>
         <More>
         <Description />
         <Equipments />

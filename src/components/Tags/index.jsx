@@ -6,7 +6,7 @@ import GlobalStyle from '../../utils/GlobalStyle';
 const TagDiv = styled.div`
 
     display: flex;
-    width: 45%;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     background-color: #F6F6F6;

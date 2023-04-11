@@ -11,18 +11,19 @@ const Dropdown = styled.div`
   display: flex;
   flex-direction: column;
   color: #444;
-  cursor: pointer;
 
-  transition: 0.4s;
   margin: 0;
+  height: 250px;
   @media (max-width: 768px) {
     width: 100%;
     margin: 20px;
+    height: auto;
     };
   
 .dropdown-header {
+  cursor: pointer;
   width: 100%;
-  position: relative;
+  position: sticky;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -41,6 +42,7 @@ h3 {
 }
 
 .dropdown-description {
+
   position: relative;
   width: 100%;
   color: #FF6060;
@@ -52,21 +54,11 @@ h3 {
   overflow: hidden;
   height: 200px;
 border-radius: 5px;
-top: 20px;
-left: 15px;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 20px;
-  top: 15px;
+transition: all  linear 0.4s;
+
 
 }
-li {
-  padding: 0;
-  margin: 0;
-  
-}
+
 .open {
   width: 20px;
   height: 20px;
@@ -76,6 +68,13 @@ li {
   width: 20px;
   height: 20px;
   padding: 10px;
+}
+.description-text {
+  padding: 10px;
+  margin: 10px;
+  text-align: justify;
+  font-family: ${GlobalStyle.text.font};
+  line-height: 30px;
 }
 
 `
