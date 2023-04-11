@@ -3,8 +3,19 @@ import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import { ReactComponent as ArrowLeft} from '../../assets/images/ArrowRight.svg';
 import { ReactComponent as ArrowRight} from '../../assets/images/ArrowLeft.svg';
+import GlobalStyle from '../../utils/GlobalStyle';
 
-
+const BannerRank = styled.span` //number of the banner
+ 
+  color: white;
+  font-family: ${GlobalStyle.text.font};
+  font-size: 18px;
+  align-self: end;
+  right: 0;
+  margin: 0px 0px -150px 0;
+  position: relative;
+  
+}`
 const CarrouselWrapper = styled.div`
   width: 90%;
   height 415px;
@@ -20,8 +31,6 @@ const CarrouselWrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-
   }
   div {
     display: flex;
@@ -57,9 +66,8 @@ function Carrousel() {
     <CarrouselWrapper>
       <img src={imagesLogements[bannerNumber - 1]} alt={`Banner ${bannerNumber}`} />
       <div>
-        <button onClick={() => setBannerNumber(previousBanner)}>
-          <ArrowRight />
-        </button>
+        <button onClick={() => setBannerNumber(previousBanner)}><ArrowRight />
+        </button> <BannerRank>{bannerNumber}/{totalBanners}</BannerRank>
         <button onClick={() => setBannerNumber(nextBanner)}> <ArrowLeft /></button>
       </div>
     </CarrouselWrapper>

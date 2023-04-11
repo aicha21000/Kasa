@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import styled from "styled-components"
 import Carrousel from "../../components/Carrousel"
 import { useParams } from "react-router-dom"
@@ -175,6 +174,3 @@ const logements = require('../About/logements.json')
     )
   }
   export default Card
-
-   
- 

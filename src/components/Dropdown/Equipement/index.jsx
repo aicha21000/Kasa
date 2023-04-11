@@ -24,7 +24,7 @@ height: 250px;
   
   };
 
-.dropdown-header {
+.dropdownHeader {
   cursor: pointer;
 width: 100%;
 position: sticky;
@@ -45,7 +45,7 @@ font-family: ${GlobalStyle.text.font};
 padding: 0 10px;     
 }
 
-.dropdown-description {
+.dropdownDescription {
 
 position: relative;
 width: 100%;
@@ -90,7 +90,7 @@ padding: 10px;
 `
 
 
-function Equipments({ label, equipments }) {
+function Equipments({ equipments }) {
 
     const { logName } = useParams();
     const logements = require('../../data/logements.json');
@@ -109,10 +109,10 @@ function Equipments({ label, equipments }) {
   return (
     <Dropdown>
 
-    <div className="dropdown-header" onClick={toggleDropdown}>
+    <div className="dropdownHeader" onClick={toggleDropdown}>
     <h3>Equipements</h3>{isOpen ? <Open className="open"/> : <Close className="close"/>}
   </div>
-      {isOpen ? <div  className="dropdown-description"> 
+      {isOpen ? <div  className="dropdownDescription"> 
         <ul>
           {equipments.map((equipment, index) => (
             <li key={index}>{equipment}</li>
