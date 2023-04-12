@@ -8,8 +8,12 @@ width: 100%;
 text-align: right;
 @media (max-width: 768px) {
 text-align: left;  
+}
+
+
 
 `;
+
 
 function Rating() {
   const { logName } = useParams();

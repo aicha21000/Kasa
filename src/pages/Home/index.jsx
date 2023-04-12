@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import Banner from "../../components/Banner"
-import CardStyle from "../../components/CardStyle"
+import Banner from "../../utils/GlobalStyle/Banner"
+import CardStyle from "../../utils/GlobalStyle/CardStyle"
 import styled from "styled-components"
 
 
@@ -47,12 +47,10 @@ const CardWrapper = styled.div`
 
 `
 
-
 function Home() {
   const logements = require('../About/logements.json')
   return (
     <HomeWrapper>
-        
   
       <Banner />
 

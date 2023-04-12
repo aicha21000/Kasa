@@ -61,10 +61,10 @@ function Carrousel() {
   const nextBanner = bannerNumber === totalBanners ? 1 : bannerNumber + 1;
 
   return (
-  totalBanners === 1 ? <CarrouselWrapper><img src={imagesLogements[0]} alt={`Banner ${bannerNumber}`} /> </CarrouselWrapper> :
+  totalBanners === 1 ? <CarrouselWrapper><img src={imagesLogements[0]} alt={`Photo_du_logement_Numéro ${bannerNumber}`} /> </CarrouselWrapper> :
 
     <CarrouselWrapper>
-      <img src={imagesLogements[bannerNumber - 1]} alt={`Banner ${bannerNumber}`} />
+      <img src={imagesLogements[bannerNumber - 1]} alt={`Photo_du_logement_Numéro ${bannerNumber}`} />
       <div>
         <button onClick={() => setBannerNumber(previousBanner)}><ArrowRight />
         </button> <BannerRank>{bannerNumber}/{totalBanners}</BannerRank>
