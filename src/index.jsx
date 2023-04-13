@@ -6,7 +6,7 @@ import About from './pages/About'
 import Cards from './pages/Card'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Error from './components/Error'
+import Error from './pages/Error'
 
 // import from 'styled-components'
 

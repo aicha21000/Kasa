@@ -7,6 +7,7 @@ import Description from "../../components/Dropdown/Description";
 import Equipments from "../../components/Dropdown/Equipement";
 import Tags from "../../components/Tags";
 import GlobalStyle from "../../utils/GlobalStyle";
+import Error from "../Error";
 
 const Container = styled.div`
 
@@ -21,15 +22,14 @@ function Card() {
     const foundLogement = logements.find((logement) => logement.id === logName);
 
     if (!foundLogement) {
-      console.log("Logement introuvable");
+      setLogement(null);
     } else {
       setLogement(foundLogement);
     }
   }, [logName]);
 
-  if (!logement) {
-    return null; 
-  }
+  if (logement) {
+  
 
   return (
     <Container>
@@ -45,7 +45,8 @@ function Card() {
         <Equipments />
       </div>
     </Container>
-  );
+  )
+} else { return <Error /> }
 }
 
 export default Card;
