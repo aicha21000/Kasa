@@ -1,176 +1,51 @@
-import styled from "styled-components"
-import Carrousel from "../../components/Carrousel"
-import { useParams } from "react-router-dom"
-import Rating from "../../components/Rating"
-import Description from "../../components/Dropdown/Description"
-import Equipments from "../../components/Dropdown/Equipement"
-import Tags from "../../components/Tags"
-import GlobalStyle from "../../utils/GlobalStyle"
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import Carrousel from "../../components/Carrousel";
+import { useParams } from "react-router-dom";
+import Rating from "../../components/Rating";
+import Description from "../../components/Dropdown/Description";
+import Equipments from "../../components/Dropdown/Equipement";
+import Tags from "../../components/Tags";
+import GlobalStyle from "../../utils/GlobalStyle";
 
-const ContentPage = styled.div`
-position: relative;
-width: 90%; 
-height: 100%;
-margin: 0 auto;
-background-color: ${GlobalStyle.colors.background};
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
+const Container = styled.div`
 
-`  
-const Info = styled.div`
-position: relative;
-width: 50%;
-display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: start;
-margin: 0 0 20px 0;
-@media (max-width: 768px) {
-  width: 100%
-  };
-`
-const TitleLocation = styled.div`
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: start;
-margin: 0 0 20px 0;
-@media (max-width: 768px) {
-  width: 100%
-  };
-`
-const Titre = styled.h1`
-
-font-family: ${GlobalStyle.text.font};
-font-style: normal;
-font-weight: 500;
-font-size: 36px;
-line-height: 142.6%;
-/* or 51px */
-margin: 0;
-align-items: flex-end;
-color: ${GlobalStyle.colors.primary};
-@media (max-width: 768px) {
-  width: 100%
-  };
-`
-const Location = styled.h2`
-flex: 1;
-left: 6.94%;
-right: 80.83%;
-top: 60.94%;
-bottom: 36.52%;
-font-family: ${GlobalStyle.text.font};
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-text-align: left;
-line-height: 142.6%;
-/* identical to box height, or 26px */
-display: flex;
-align-items: start;
-color: ${GlobalStyle.colors.primary};
-margin: 0;
-padding: 0;
-@media (max-width: 768px) {
-  width: 100%;
-  };
-`
-
-const TagsRate = styled.div`
-width: 50%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-margin: 0 0 20px 0;
-@media (max-width: 768px) {
-  flex-direction: row-reverse;
-  width: 100%;
-  };
-`
-const HostName = styled.div`
-width: 100%;
-top: 573px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: right;
-align-items: flex-end;
-text-align: right;
-
-p {
-font-family: ${GlobalStyle.text.font};
-width: 80px;
-padding: 10px;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 142.6%;
-
-}
-
-color: #FF6060;
-.dot {
-  align-self: center;
-  height: 60px;
-  width: 60px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-`
-const More = styled.div`
-position: relative;
-width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-@media (max-width: 768px) {
-  flex-direction: column;
-
-  width: 100%;
-  };
-`
+`;
 
 function Card() {
-const { logName } = useParams()
-const logements = require('../About/logements.json')
- const logement = logements.find(logement => logement.id === logName)
- if (!logement) {
-  return <div>Logement introuvable</div>
- }
+  const { logName } = useParams();
+  const [logement, setLogement] = useState(null);
 
-    return (
+  useEffect(() => {
+    const logements = require('../About/logements.json');
+    const foundLogement = logements.find((logement) => logement.id === logName);
+
+    if (!foundLogement) {
+      console.log("Logement introuvable");
+    } else {
+      setLogement(foundLogement);
+    }
+  }, [logName]);
+
+  if (!logement) {
+    return null; 
+  }
+
+  return (
+    <Container>
+      <Carrousel />
       <div>
-   <Carrousel />
-  <ContentPage>
-        <Info>
-      <TitleLocation >
-       <Titre> {logement.title} </Titre>
-        <Location> {logement.location }</Location>
-        </TitleLocation>
-         <Tags />
-         </Info>
-        <TagsRate>
-          <HostName>
-        <p> {logement.host.name}</p>
-        <span className="dot"></span>
-        </HostName>
+        <h1>{logement.title}</h1>
+        <p>{logement.location}</p>
+        <Tags />
+        <p>{logement.host.name}</p>
+        <img src={logement.host.picture} alt="imageHost"></img>
         <Rating />
-        </TagsRate>
-        <More>
         <Description />
         <Equipments />
-        </More>
-  </ContentPage>
-
       </div>
-    )
-  }
-  export default Card
+    </Container>
+  );
+}
+
+export default Card;
