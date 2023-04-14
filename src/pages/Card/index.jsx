@@ -5,7 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Rating from "../../components/Rating";
 
 import Tags from "../../components/Tags";
-import Drop from "../../components/Dropdown/Drop";
+import Drop from "../../components/Dropdown";
 
 
 

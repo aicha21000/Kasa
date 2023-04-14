@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ReactComponent as Open } from '../../../assets/images/Open.svg';
-import { ReactComponent as Close } from '../../../assets/images/Close.svg';
+import { ReactComponent as Open } from '../../assets/images/Open.svg';
+import { ReactComponent as Close } from '../../assets/images/Close.svg';
 import styled from 'styled-components';
-import GlobalStyle from '../../../utils/GlobalStyle';
+import GlobalStyle from '../../utils/GlobalStyle';
 
 
 const Dropdown = styled.div`
