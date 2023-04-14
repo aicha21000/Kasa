@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Carrousel from "../../components/Carrousel";
 import { useParams, useNavigate } from "react-router-dom";
 import Rating from "../../components/Rating";
-import Description from "../../components/Dropdown/Description";
-import Equipments from "../../components/Dropdown/Equipement";
+
 import Tags from "../../components/Tags";
 import Drop from "../../components/Dropdown/Drop";
 
@@ -46,7 +45,19 @@ function Card() {
           <Rating />
           
           {logement && <Drop contentLabel={logement.description} label ="Description" />}
-          {logement && <Drop contentLabel={logement.equipments} label ="Equipements" />}
+          {logement && (
+          <Drop
+          contentLabel={
+              <ul>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+            label="Equipements"
+          />
+        )}
+         
         </div>
       </Container>
     );
