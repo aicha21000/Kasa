@@ -1,39 +1,30 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa';
+import FilledStar from '../../assets/images/FilledStar.svg';
+import EmptyStar from '../../assets/images/EmptyStar.svg';
 import styled from 'styled-components';
 
 const RatingDiv = styled.div`
-width: 100%;
-text-align: right;
-@media (max-width: 768px) {
-text-align: left;  
-}
-
-
-
+  width: 100%;
+  text-align: right;
+  @media (max-width: 768px) {
+    text-align: left;  
+  }
 `;
 
-
-function Rating() {
-  const { logName } = useParams();
-  const logements = require('../../assets/data/logements.json');
-  const logement = logements.find((logement) => logement.id === logName);
-  const starNumber = logement.rating;
-  const emptyStars = 5 - starNumber;
-
+function Rating({ rating }) {
   const stars = [];
-  const empty = [];
 
-  for (let i = 0; i < starNumber; i++) {
-    stars.push(<FaStar style={{color :'#FF6060', fontSize: '26px', width: '40px'}} key={i} />);
-  }
-  
-  for (let i = 0; i < emptyStars; i++) {
-    empty.push(<FaStar style={{color :'#bbb', fontSize: '26px', width: '40px'}} key={i} />);
+  for (let i = 0; i < 5; i++) {
+    stars.push(
+      i < rating ? (
+        <img src={FilledStar} alt='filledStar' key={i} />
+      ) : (
+        <img src={EmptyStar} alt='emptyStar' key={i} />
+      )
+    );
   }
 
-  return <RatingDiv>{stars}{empty}</RatingDiv>;
+  return <RatingDiv>{stars}</RatingDiv>;
 }
 
 export default Rating;

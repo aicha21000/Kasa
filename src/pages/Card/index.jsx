@@ -32,32 +32,33 @@ function Card() {
   }, [logName, navigate]);
 
   if (logement) {
+    const { pictures, title, location, host, rating, description, equipments } =
+      logement;
     return (
       <Container>
-{logement && <Carrousel imagesLogements={logement.pictures} />}
+        {logement && <Carrousel imagesLogements={pictures} />}
         <div>
-          <h1>{logement.title}</h1>
-          
-          <p>{logement.location}</p>
+          <h1>{title}</h1>
+
+          <p>{location}</p>
           <Tags />
-          <p>{logement.host.name}</p>
-          <img src={logement.host.picture} alt="imageHost"></img>
-          <Rating />
-          
-          {logement && <Drop contentLabel={logement.description} label ="Description" />}
+          <p>{host.name}</p>
+          <img src={host.picture} alt="imageHost"></img>
+          {logement && <Rating rating={rating} />}
+          {logement && <Drop contentLabel={description} label="Description" />}
           {logement && (
-          <Drop
-          contentLabel={
-              <ul>
-                {logement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            }
-            label="Equipements"
-          />
-        )}
-         
+            <Drop
+              contentLabel={
+                <ul>
+                  {equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))}
+                </ul>
+              }
+              label="Equipements"
+            />
+          )}
+
         </div>
       </Container>
     );
