@@ -6,6 +6,7 @@ import Rating from "../../components/Rating";
 import Description from "../../components/Dropdown/Description";
 import Equipments from "../../components/Dropdown/Equipement";
 import Tags from "../../components/Tags";
+import Drop from "../../components/Dropdown/Drop";
 
 
 
@@ -37,13 +38,15 @@ function Card() {
 {logement && <Carrousel imagesLogements={logement.pictures} />}
         <div>
           <h1>{logement.title}</h1>
+          
           <p>{logement.location}</p>
           <Tags />
           <p>{logement.host.name}</p>
           <img src={logement.host.picture} alt="imageHost"></img>
           <Rating />
-          <Description />
-          <Equipments />
+          
+          {logement && <Drop contentLabel={logement.description} label ="Description" />}
+          {logement && <Drop contentLabel={logement.equipments} label ="Equipements" />}
         </div>
       </Container>
     );
