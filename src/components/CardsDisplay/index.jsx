@@ -47,12 +47,12 @@ const CardImage = styled.img`
         transform: scale(1.1);
     }
 `
-function CardStyle({ title, description, button, picture}) {
+function CardsDisplay({ title, cover}) {
   return (
     <CardWrapper>
      
         
-        <CardImage src={picture} alt ="image de la fiche"></CardImage>
+        <CardImage src={cover} alt ="image de la fiche"></CardImage>
         <CardTitle>{title}</CardTitle>
         
    
@@ -61,4 +61,4 @@ function CardStyle({ title, description, button, picture}) {
   )
 }
 
-export default CardStyle;
+export default CardsDisplay;

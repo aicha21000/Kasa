@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Banner from "../../utils/GlobalStyle/Banner"
-import CardStyle from "../../utils/GlobalStyle/CardStyle"
+import CardsDisplay from "../../components/CardsDisplay"
 import styled from "styled-components"
 
 
@@ -60,11 +60,10 @@ function Home() {
 
         {logements.map((id, index) => (
           <Link to={`/fiche/${id.id}`} key={`${id.name}-${index}`}>
-            <CardStyle
+            <CardsDisplay
                 
                 cover={id.cover}
                 title={id.title}
-                picture={id.cover}
             />
           </Link>
         ))}
