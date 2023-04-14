@@ -6,8 +6,7 @@ import Rating from "../../components/Rating";
 import Description from "../../components/Dropdown/Description";
 import Equipments from "../../components/Dropdown/Equipement";
 import Tags from "../../components/Tags";
-import GlobalStyle from "../../utils/GlobalStyle";
-import Error from "../Error";
+
 
 
 const Container = styled.div`
@@ -19,8 +18,9 @@ function Card() {
   const navigate = useNavigate();
   const [logement, setLogement] = useState(null);
 
+
   useEffect(() => {
-    const logements = require('../About/logements.json');
+    const logements = require('../../assets/data/logements.json');
     const foundLogement = logements.find((logement) => logement.id === logName);
 
     if (!foundLogement) {
@@ -34,7 +34,7 @@ function Card() {
   if (logement) {
     return (
       <Container>
-        <Carrousel />
+{logement && <Carrousel imagesLogements={logement.pictures} />}
         <div>
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>

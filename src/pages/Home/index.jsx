@@ -48,7 +48,7 @@ const CardWrapper = styled.div`
 `
 
 function Home() {
-  const logements = require('../About/logements.json')
+  const logements = require('../../assets/data/logements.json')
   return (
     <HomeWrapper>
   

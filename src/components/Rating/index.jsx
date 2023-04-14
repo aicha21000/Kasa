@@ -17,7 +17,7 @@ text-align: left;
 
 function Rating() {
   const { logName } = useParams();
-  const logements = require('../data/logements.json');
+  const logements = require('../../assets/data/logements.json');
   const logement = logements.find((logement) => logement.id === logName);
   const starNumber = logement.rating;
   const emptyStars = 5 - starNumber;

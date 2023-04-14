@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ReactComponent as Open } from '../../../assets/images/Open.svg';
 import { ReactComponent as Close } from '../../../assets/images/Close.svg';
 import data from '../../data/data.json';
-import styled from 'styled-components';
 import Background from '../../../assets/images/Background.png';
 
 const About = () => {

@@ -93,7 +93,7 @@ padding: 10px;
 function Equipments({ equipments }) {
 
     const { logName } = useParams();
-    const logements = require('../../data/logements.json');
+    const logements = require('../../../assets/data/logements.json');
     const logement = logements.find((logement) => logement.id === logName);
     equipments = logement.equipments;
 		

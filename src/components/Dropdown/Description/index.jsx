@@ -83,7 +83,7 @@ transition: all  linear 0.4s;
 function Description({ label, description }) {
 
     const { logName } = useParams();
-    const logements = require('../../data/logements.json');
+    const logements = require('../../../assets/data/logements.json');
     const logement = logements.find((logement) => logement.id === logName);
     description = logement.description;
 

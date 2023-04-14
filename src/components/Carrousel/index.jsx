@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
 import { ReactComponent as ArrowLeft} from '../../assets/images/ArrowRight.svg';
 import { ReactComponent as ArrowRight} from '../../assets/images/ArrowLeft.svg';
 import GlobalStyle from '../../utils/GlobalStyle';
@@ -48,29 +47,28 @@ const CarrouselWrapper = styled.div`
   `
 
 
-function Carrousel() {
-  const { logName } = useParams()
-  const [bannerNumber, setBannerNumber] = useState(1);
-  const logements = require('../data/logements.json')
-  const logement = logements.find(logement => logement.id === logName)
-  const imagesLogements = logement ? logement.pictures : []
-
-  const totalBanners = imagesLogements.length;
-  const previousBanner = bannerNumber === 1 ? totalBanners: bannerNumber - 1;
-  const nextBanner = bannerNumber === totalBanners ? 1 : bannerNumber + 1;
-
-  return (
-  totalBanners === 1 ? <CarrouselWrapper><img src={imagesLogements[0]} alt={`Photo_du_logement_Numéro ${bannerNumber}`} /> </CarrouselWrapper> :
-
-    <CarrouselWrapper>
-      <img src={imagesLogements[bannerNumber - 1]} alt={`Photo_du_logement_Numéro ${bannerNumber}`} />
-      <div>
-        <button onClick={() => setBannerNumber(previousBanner)}><ArrowRight />
-        </button> <BannerRank>{bannerNumber}/{totalBanners}</BannerRank>
-        <button onClick={() => setBannerNumber(nextBanner)}> <ArrowLeft /></button>
-      </div>
-    </CarrouselWrapper>
-  );
-}
+  function Carrousel({ imagesLogements }) {
+    const [bannerNumber, setBannerNumber] = useState(1);
+    const totalBanners = imagesLogements.length;
+    const previousBanner = bannerNumber === 1 ? totalBanners : bannerNumber - 1;
+    const nextBanner = bannerNumber === totalBanners ? 1 : bannerNumber + 1;
+  
+    return (
+      totalBanners === 1 ? (
+        <CarrouselWrapper>
+          <img src={imagesLogements[0]} alt={`Photo_du_logement_Numéro ${bannerNumber}`} />
+        </CarrouselWrapper>
+      ) : (
+        <CarrouselWrapper>
+          <img src={imagesLogements[bannerNumber - 1]} alt={`Photo_du_logement_Numéro ${bannerNumber}`} />
+          <div>
+            <button onClick={() => setBannerNumber(previousBanner)}><ArrowRight /></button>
+            <BannerRank>{bannerNumber}/{totalBanners}</BannerRank>
+            <button onClick={() => setBannerNumber(nextBanner)}><ArrowLeft /></button>
+          </div>
+        </CarrouselWrapper>
+      )
+    );
+  }
 
 export default Carrousel

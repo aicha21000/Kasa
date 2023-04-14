@@ -8,7 +8,7 @@ const TagDiv = styled.div`
 
 function Tags({ label }) {
   const { logName } = useParams();
-  const logements = require('../data/logements.json');
+  const logements = require('../../assets/data/logements.json');
   const logement = logements.find((logement) => logement.id === logName);
   const [tags, setTags] = useState(logement.tags);
 
