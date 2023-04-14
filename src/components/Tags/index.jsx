@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import styled from 'styled-components';
-import GlobalStyle from '../../utils/GlobalStyle';
 
 const TagDiv = styled.div`
 `;
 
-function Tags({ label }) {
-  const { logName } = useParams();
-  const logements = require('../../assets/data/logements.json');
-  const logement = logements.find((logement) => logement.id === logName);
-  const [tags, setTags] = useState(logement.tags);
-
-  useEffect(() => {
-    setTags(logement.tags);
-  }, [logement.tags]);
+function Tags({ tags }) {
 
   return (
     <TagDiv>
       <ul>
-        {tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
+        {tags.map((tags, index) => (
+          <li key={index}>{tags}</li>
         ))}
       </ul>
     </TagDiv>
