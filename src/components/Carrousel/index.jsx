@@ -50,11 +50,10 @@ const CarrouselWrapper = styled.div`
 
 function Carrousel() {
   const { logName } = useParams()
+  const [bannerNumber, setBannerNumber] = useState(1);
   const logements = require('../data/logements.json')
   const logement = logements.find(logement => logement.id === logName)
   const imagesLogements = logement ? logement.pictures : []
-
-  const [bannerNumber, setBannerNumber] = useState(1);
 
   const totalBanners = imagesLogements.length;
   const previousBanner = bannerNumber === 1 ? totalBanners: bannerNumber - 1;
