@@ -1,0 +1,47 @@
+
+
+
+
+.cardWrapper {
+
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+        width: 90%
+        }
+
+& 
+h2 { 
+
+    width: 300px;    
+    height: 52px;
+    top: 268px;
+    left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    color: red;
+    position: absolute;
+
+}
+ .cardImage {
+    margin: 0;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+   
+    }
+}
+.cardWrapper:hover .cardImage--unique {
+    transform: scale(1.1);
+  }
