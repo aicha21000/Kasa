@@ -7,14 +7,15 @@ const About = () => {
 
   return (
     <div>
-      <img src={Background} alt='kalen-emsley-Bkci_8qcdvQ-unsplash 2' /> 
+      <img className='banner' src={Background} alt='kalen-emsley-Bkci_8qcdvQ-unsplash 2' /> 
+      <div className='dropdownDiv'>
       {data.map((element, index) => (
         <Drop
           key={index}
           contentLabel={element.content}
           label={element.title}
         />
-      ))}
+      ))}</div>
     </div>
   );
 };

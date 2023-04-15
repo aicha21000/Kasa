@@ -7,7 +7,8 @@ import Cards from './pages/Card'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './pages/Error'
-
+import './utils/GlobalStyle/normalize.css'
+import './utils/GlobalStyle/_main.scss'
 ReactDOM.render(
   <React.StrictMode>
       <BrowserRouter>

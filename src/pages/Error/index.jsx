@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import GlobalStyle from '../../utils/GlobalStyle'
 
 const ErrorDiv = styled.div`
   position: relative;
@@ -18,7 +17,6 @@ const ErrorDiv = styled.div`
     width: 597px;
     height: 263px;
     margin: 50px 0  20px 0;
-    font-family: ${GlobalStyle.text.font};
     font-style: normal;
     font-weight: 700;
     font-size: 288px ;
@@ -30,7 +28,7 @@ const ErrorDiv = styled.div`
   p {
     position: relative;
     
-    font-family: ${GlobalStyle.text.font};    font-weight: 500;
+  font-weight: 500;
     font-size: 36px;
     line-height: 142.6%;
 
@@ -45,7 +43,6 @@ const ErrorDiv = styled.div`
     position: relative;
     font-size: 18px;
     
-    font-family: ${GlobalStyle.text.font};
     font-style: normal;
     font-weight: 500;
 

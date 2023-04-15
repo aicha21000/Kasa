@@ -1,7 +1,6 @@
 import { BrowserRouter, Link } from 'react-router-dom';
 import LOGO from "../../assets/images/LOGO.svg";
 import styled from 'styled-components';
-import GlobalStyle from '../../utils/GlobalStyle';
 
 const Nav = styled.nav`
 img {
@@ -9,7 +8,7 @@ img {
 }
 
   height: 80px;
-  background-color: ${GlobalStyle.colors.secondary};
+  background-color: FFFFFF;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,8 +30,6 @@ img {
       Top: 17px;
       Left: 931px;
       a {
-        font-family: ${GlobalStyle.text.font};
-        font-style: ${GlobalStyle.text.fontStyle}, sans-serif;
         color: #FF6060;
         line-height: 34.22px;
         text-decoration: none;

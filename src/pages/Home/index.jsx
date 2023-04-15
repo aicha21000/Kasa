@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import Banner from "../../utils/GlobalStyle/Banner";
+import Banner from "../../components/Banner";
 import CardsDisplay from "../../components/CardsDisplay";
 import { useState, useEffect } from "react";
+import image from "../../assets/images/banner.png";
 
 function Home() {
   const [logement, setLogement] = useState(null);
-
   useEffect(() => {
     const logements = require("../../assets/data/logements.json");
     setLogement(logements);
@@ -13,7 +13,8 @@ function Home() {
 
   return (
     <div>
-      <Banner />
+      <Banner image={image} />
+    
       <h1> Fiches </h1>
       <div>
         {logement &&

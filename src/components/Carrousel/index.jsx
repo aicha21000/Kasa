@@ -2,12 +2,10 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as ArrowLeft} from '../../assets/images/ArrowRight.svg';
 import { ReactComponent as ArrowRight} from '../../assets/images/ArrowLeft.svg';
-import GlobalStyle from '../../utils/GlobalStyle';
 
 const BannerRank = styled.span` //number of the banner
  
   color: white;
-  font-family: ${GlobalStyle.text.font};
   font-size: 18px;
   align-self: end;
   right: 0;
