@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Carrousel from "../../components/Carrousel";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Rating from "../../components/Rating";
 import Tags from "../../components/Tags";
 import Drop from "../../components/Dropdown";
@@ -11,6 +11,7 @@ const Container = styled.div``;
 function Card() {
   const { logName } = useParams();
   const [logement, setLogement] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const logements = require("../../assets/data/logements.json");
@@ -21,7 +22,8 @@ function Card() {
   }, [logName]);
 
   if (!logement) {
-    return null;
+    navigate("/error");
+    return null;    
   }
 
   const { pictures, title, location, host, rating, description, equipments, tags } = logement;
