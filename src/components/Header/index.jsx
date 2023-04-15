@@ -1,49 +1,7 @@
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LOGO from "../../assets/images/LOGO.svg";
-import styled from 'styled-components';
+import './_index.scss'
 
-const Nav = styled.nav`
-img {
-  cursor: pointer;
-}
-
-  height: 80px;
-  background-color: FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 0 20px 0;
-  box-sizing: border-box;
-  padding: 20px;
-  img {
-    width: 210.32px;
-    height: 68;
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    li {
-      Width: 136px;
-      Height: 34px;
-      Top: 17px;
-      Left: 931px;
-      a {
-        color: #FF6060;
-        line-height: 34.22px;
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: 500;
-        &:hover {
-
-          text-decoration: underline;
-
-        }
-      }
-    }
-  }
-`;
 
 
 
@@ -52,8 +10,11 @@ function Header() {
     window.location.href = "/";
   };
     return (
-      <Nav>
-           <img src={LOGO} alt="logo" onClick={handleClick}/>
+      <div className='headerContainer'>
+        <div className='logo'>
+           <img  src={LOGO} alt="logo" onClick={handleClick}/>
+           </div>
+        <nav>
 
         <ul>
           <li>
@@ -63,7 +24,8 @@ function Header() {
             <Link to="/about">A Propos</Link>
           </li>
         </ul>
-      </Nav>
+        </nav>
+      </div>
     );
   }
 export default Header

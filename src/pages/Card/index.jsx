@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import Carrousel from "../../components/Carrousel";
 import { useParams, useNavigate } from "react-router-dom";
 import Rating from "../../components/Rating";
 import Tags from "../../components/Tags";
 import Drop from "../../components/Dropdown";
-
-const Container = styled.div``;
+import "./_index.scss";
 
 function Card() {
   const { logName } = useParams();
@@ -23,34 +21,25 @@ function Card() {
 
   if (!logement) {
     navigate("/error");
-    return null;    
+    return null;
   }
 
   const { pictures, title, location, host, rating, description, equipments, tags } = logement;
-  
+
   return (
-    <Container>
-      <Carrousel imagesLogements={pictures} />
-      <div>
-        <h1>{title}</h1>
-        <p>{location}</p>
-        <Tags tags={tags} />
-        <p>{host.name}</p>
+    <div className="card">
+      <Carrousel imagesLogements={pictures} className="cardCarousel" />
+      <h1 className="cardTitle">{title}</h1>
+      <p className="cardLocation">{location}</p>
+      <Tags tags={tags} className="cardTags" />
+      <div className="cardHost">
         <img src={host.picture} alt="imageHost"></img>
-        <Rating rating={rating} />
-        <Drop contentLabel={description} label="Description" />
-        <Drop
-          contentLabel={
-            <ul>
-              {equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
-          }
-          label="Equipements"
-        />
+        <p>{host.name}</p>
       </div>
-    </Container>
+      <Rating rating={rating} className="cardRating" />
+      <Drop contentLabel={description} label="Description" className="cardDropdown" />
+      <Drop contentLabel={<ul>{equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}</ul>} label="Equipements" className="cardDropdown" />
+    </div>
   );
 }
 

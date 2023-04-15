@@ -4,11 +4,11 @@
   display: flex;
   flex-direction: column;
   color: #444;
+  width: 100%;
 
   margin: 20px;
   height: auto;
   @media (max-width: 768px) {
-    width: 100%;
     margin: 20px;
     height: auto;
     };
@@ -53,12 +53,13 @@ transition: all  linear 0.4s;
 .open {
   width: 20px;
   height: 20px;
-  padding: 10px;
+  margin: 0 10px;
 }
 .close {
   width: 20px;
   height: 20px;
-  padding: 10px;
+  margin: 0 10px;
+  
 }
 .description-text {
   padding: 10px;

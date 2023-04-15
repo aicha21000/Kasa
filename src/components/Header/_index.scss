@@ -1,0 +1,36 @@
+*{transition:all 0.3s ease-in-out;}
+
+.headerContainer {
+  clear:both;
+  overflow:auto;
+  padding: 20px;
+  display: flex;
+    justify-content: space-between;
+}
+
+nav{float:right;}
+
+.logo img{
+    float:left;
+    height: 40px;
+    
+&:hover{
+  cursor: pointer;
+}}
+
+
+li{
+  display: inline-block; 
+  padding:10px;
+  font-size:20px; 
+  text-decoration:none;
+}
+li a {
+  text-decoration: none;
+  color: #FF6060;}
+  
+
+li a:hover{
+    text-decoration: underline;
+  
+}

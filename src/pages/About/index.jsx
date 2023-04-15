@@ -1,13 +1,14 @@
 import React from 'react';
 import data from '../../assets/data/data.json';
-import Background from '../../assets/images/Background.png';
+import Banner from '../../components/Banner';
 import Drop from '../../components/Dropdown';
+import image from '../../assets/images/Background.png';
 
 const About = () => {
 
   return (
     <div>
-      <img className='banner' src={Background} alt='kalen-emsley-Bkci_8qcdvQ-unsplash 2' /> 
+      <Banner image={image} />
       <div className='dropdownDiv'>
       {data.map((element, index) => (
         <Drop
