@@ -7,21 +7,21 @@ import Cards from './pages/Card'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './pages/Error'
+import './utils/GlobalStyle/main.scss'
 import './utils/GlobalStyle/normalize.css'
-import './utils/GlobalStyle/_main.scss'
+import './utils/GlobalStyle/_variables.scss'
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
+    <BrowserRouter>
       <Header />
       <Routes>
-      <Route exact path="/" element={<Home />  } />
-      <Route exact path="/about" element={<About />} />
-      <Route exact path="/fiche/:logName" element={<Cards />} />
-
-      <Route path="*" element={<Error />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/fiche/:logName" element={<Cards />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-      </BrowserRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

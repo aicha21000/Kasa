@@ -7,18 +7,20 @@ import image from '../../assets/images/Background.png';
 const About = () => {
 
   return (
-    <div>
+    <div className='container'>
       <Banner image={image} />
       <div className='dropdownDiv'>
-      {data.map((element, index) => (
-        <Drop
-          key={index}
-          contentLabel={element.content}
-          label={element.title}
-        />
-      ))}</div>
+        {data.map((element, index) => (
+          <Drop
+            key={index}
+            contentLabel={element.content}
+            label={element.title}
+          />
+        ))
+        }
+      </div>
     </div>
-  );
-};
+  )
+}
 
 export default About;

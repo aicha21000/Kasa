@@ -1,36 +1,41 @@
-*{transition:all 0.3s ease-in-out;}
+* {
+  transition: all 0.3s ease-in-out;
+}
 
 .headerContainer {
-  clear:both;
-  overflow:auto;
-  padding: 20px;
+  clear: both;
+  overflow: auto;
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav{float:right;}
-
-.logo img{
-    float:left;
-    height: 40px;
-    
-&:hover{
-  cursor: pointer;
-}}
-
-
-li{
-  display: inline-block; 
-  padding:10px;
-  font-size:20px; 
-  text-decoration:none;
+nav {
+  float: right;
 }
+
+.logo img {
+  float: left;
+  width: 14vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 2.5vw;
+  text-decoration: none;
+}
+
 li a {
   text-decoration: none;
-  color: #FF6060;}
-  
+  color: #FF6060;
+}
 
-li a:hover{
-    text-decoration: underline;
-  
+li a:hover {
+  text-decoration: underline;
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import "./_index.scss"
+import "./_index.scss";
 
-function CardsDisplay({ title, cover}) {
+function CardsDisplay({ title, cover }) {
   return (
     <div className="cardWrapper">
       <img className="cardImage cardImage--unique" src={cover} alt="imagedelafiche" />

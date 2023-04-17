@@ -27,18 +27,34 @@ function Card() {
   const { pictures, title, location, host, rating, description, equipments, tags } = logement;
 
   return (
-    <div className="card">
-      <Carrousel imagesLogements={pictures} className="cardCarousel" />
-      <h1 className="cardTitle">{title}</h1>
-      <p className="cardLocation">{location}</p>
-      <Tags tags={tags} className="cardTags" />
-      <div className="cardHost">
-        <img src={host.picture} alt="imageHost"></img>
-        <p>{host.name}</p>
+    <div className="card container">
+      <div className="cardCarrousel">
+        <Carrousel imagesLogements={pictures} />
       </div>
-      <Rating rating={rating} className="cardRating" />
-      <Drop contentLabel={description} label="Description" className="cardDropdown" />
-      <Drop contentLabel={<ul>{equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}</ul>} label="Equipements" className="cardDropdown" />
+      <div className="info">
+        <h1 className="cardTitle">{title}</h1>
+        <p className="cardLocation">{location}</p>
+        <div className="cardTags">
+          <Tags tags={tags} />
+        </div>
+
+      </div>
+      <div className="hostRate">
+        <div className="cardHost">
+          <p>{host.name}</p>
+          <img src={host.picture} alt="imageHost"></img>
+        </div>
+
+        <div className="cardRating">
+          <Rating rating={rating} />
+        </div>
+      </div>
+      <div className="cardDropdown">
+        <Drop contentLabel={description} label="Description" />
+      </div>
+      <div className="cardDropdown">
+        <Drop contentLabel={<ul>{equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}</ul>} label="Equipements" />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,50 @@
+
+
+.carrouselWrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+ 
+}
+  .logementImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  .buttonArrows {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      svg {
+        width: 5vw;
+        margin: 10px;
+      }
+    }
+    .numberImage {
+      font-size: 1rem;
+      color: #ffffff;
+      align-self: end;
+      margin-bottom: 1rem;
+      
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+        
+      }
+      
+    }
+  

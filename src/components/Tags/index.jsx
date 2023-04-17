@@ -1,19 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const TagDiv = styled.div`
-`;
+import './_index.scss';
 
 function Tags({ tags }) {
-
   return (
-    <TagDiv>
+    <div className='tagDiv'>
       <ul>
         {tags.map((tags, index) => (
           <li key={index}>{tags}</li>
         ))}
       </ul>
-    </TagDiv>
+    </div>
   );
 }
 

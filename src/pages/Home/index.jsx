@@ -8,6 +8,7 @@ import "./_index.scss";
 function Home() {
   const text = "Chez vous, partout et ailleurs";
   const [logement, setLogement] = useState(null);
+
   useEffect(() => {
     const logements = require("../../assets/data/logements.json");
     setLogement(logements);
@@ -16,18 +17,15 @@ function Home() {
   return (
     <div className="container">
       <Banner image={image} text={text} />
-    
+
       <div className="cardsContainer">
         {logement &&
           logement.map((id, index) => (
-            <Link to={`/fiche/${id.id}`} key={`${id.name}-${index}`}>
-              <CardsDisplay
-              className="cards"
-                key={`${id.name}-${index}`}
-                cover={id.cover}
-                title={id.title}
-              />
-            </Link>
+            <div className="cardUnit" key={`${id.name}-${index}`}>
+              <Link to={`/fiche/${id.id}`}>
+                <CardsDisplay cover={id.cover} title={id.title} />
+              </Link>
+            </div>
           ))}
       </div>
     </div>

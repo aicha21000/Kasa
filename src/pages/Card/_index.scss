@@ -1,54 +1,110 @@
 .card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.cardCarrousel {
+  width: 100%;
+  height: 30vw;
+}
+
+.hostRate {
+  width: 50%;
+  height: 150px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.info {
+  width: 50%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.cardTitle {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.cardLocation {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.cardTags {
+  width: 100%;
+  margin-bottom: 16px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.cardHost {
+  width: 100%;
+  display: flex;
   align-items: center;
+  margin-bottom: 16px;
+  justify-content: end;
 
-  .cardCarousel {
+  @media screen and (max-width: 768px) {
+    align-self: start;
+  }
+}
+
+.cardHost img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.cardHost p {
+  font-size: 16px;
+}
+
+.cardRating {
+  display: flex;
+  width: 100%;
+  margin-bottom: 16px;
+  justify-content: end;
+  align-self: center;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+}
+
+.cardDropdown {
+  align-self: start;
+  width: 48%;
+  height: auto;
+
+  @media screen and (max-width: 768px) {
     width: 100%;
+    height: auto;
   }
-
-  .cardTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 1rem 0;
-  }
-
-  .cardLocation {
-    font-size: 1.2rem;
-    margin: 0 0 1rem;
-  }
-
- .cardTags {
-    margin: 1rem 0;
-  }
-
-  .cardHost {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-   
-
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 0.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-  }
-
-  .cardRating {
-    margin: 1rem 0;
-  }
-
-  .cardDropdown {
-    margin-top: 1rem;
-    width: 100%;
-    cursor: pointer;
-  }
-
 }

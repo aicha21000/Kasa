@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import './_variables.scss';
+@import '../../components/Dropdown/index';
+@import '../../components/CardsDisplay/_index.scss';
+@import '../../components/Header/_index.scss';
+@import '../../components/Footer/_index.scss';
+@import '../../components/Carrousel/_index.scss';
+@import '../../components//Rating/_index.scss';
+@import '../../components/Tags/_index.scss';
+
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headerContainer {
+    padding: 20px 100px;
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+
+}
+.container {
+    padding: 20px 100px;
+    color : $colorPrimary;
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+}
