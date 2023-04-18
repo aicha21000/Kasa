@@ -1,0 +1,16 @@
+@import '../../utils/GlobalStyle/variables.scss';
+
+.stars {
+    width: 24.75px;
+    height: 24px;
+    top: 658px;
+    left: 1230px;
+    margin-left: 7.125px;
+    @media screen and (max-width: 768px) {
+        width: 13.41px;
+        height: 13px;
+        top:492px;
+        left:62px;
+        margin-left: 3.30px;
+    }
+}

@@ -1,27 +1,39 @@
+@import '../../utils/GlobalStyle/variables.scss';
+
 .tagDiv {
     display: flex;
     justify-content: start;
+    align-items: end;
 
     ul {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         padding: 0;
         list-style: none;
+        margin: 0;
     }
 
     li {
         display: flex;
-        align-items: center;
-        margin: 0 0.5rem 0.5rem 0;
-        background-color: #FF6060;
-        color: #FFFFFF;
-        border-radius: 20px;
-        font-size: 8px;
-        width: 100px;
-        height: 20px;
+        align-items: start;
+        margin: 0 0.5rem 0 0;
+        background-color: $colorPrimary;
+        color: $colorSecondary;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19.96px;
+        width: 115px;
+        height: 25px;
         overflow: hidden;
         text-align: center;
         justify-content: center;
         padding: 0;
+        @media screen and (max-width: 768px) {
+            width: 100px;
+            height: 20px;
+            font-size: 10px;
+            line-height: 16.8px;
+        }
     }
 }

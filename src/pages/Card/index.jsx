@@ -6,6 +6,7 @@ import Tags from "../../components/Tags";
 import Drop from "../../components/Dropdown";
 import "./_index.scss";
 
+
 function Card() {
   const { logName } = useParams();
   const [logement, setLogement] = useState(null);

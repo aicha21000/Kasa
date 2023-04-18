@@ -1,6 +1,6 @@
 import React from 'react';
 import LOGO from '../../assets/images/LogoWhite.svg';
-
+import './_index.scss';
 function Footer() {
   return (
     <div className='footerDiv'>

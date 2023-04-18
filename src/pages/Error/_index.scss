@@ -1,3 +1,5 @@
+@import '../../utils/GlobalStyle/variables.scss';
+
 .errorContainer {
   position: relative;
   padding: 20px;
@@ -9,7 +11,8 @@
   justify-content: center;
   text-align: center;
   margin: 0;
-}
+  color: $colorPrimary;
+
 
 .textError {
   display: flex;
@@ -20,9 +23,7 @@
   @media screen and (max-width: 768px) {
     width: 50%;
   }
-}
-
-.errorCode {
+  .errorCode {
   font-size: 288px;
   text-align: center;
   font-weight: 700;
@@ -42,6 +43,7 @@ p {
     font-size: 18px;
   }
 }
+}
 
 .backTo {
   position: relative;
@@ -50,9 +52,11 @@ p {
   text-decoration-line: underline;
   margin-top: 100px;
   align-self: center;
+  color: $colorPrimary;
 
   @media screen and (max-width: 768px) {
     font-size: 12px;
     margin-top: 150px;
   }
+}
 }

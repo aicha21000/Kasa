@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 import Error from './pages/Error'
 import './utils/GlobalStyle/main.scss'
 import './utils/GlobalStyle/normalize.css'
-import './utils/GlobalStyle/_variables.scss'
+import './utils/GlobalStyle/variables.scss'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -3,6 +3,7 @@ import data from '../../assets/data/data.json';
 import Banner from '../../components/Banner';
 import Drop from '../../components/Dropdown';
 import image from '../../assets/images/Background.png';
+import './_index.scss';
 
 const About = () => {
 

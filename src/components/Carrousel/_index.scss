@@ -1,3 +1,4 @@
+@import '../../utils/GlobalStyle/variables.scss';
 
 
 .carrouselWrapper {
@@ -36,7 +37,7 @@
     }
     .numberImage {
       font-size: 1rem;
-      color: #ffffff;
+      color: $colorSecondary;
       align-self: end;
       margin-bottom: 1rem;
       

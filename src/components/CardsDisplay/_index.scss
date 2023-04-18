@@ -1,10 +1,11 @@
+@import "../../utils/GlobalStyle/variables";
 .cardWrapper {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   position: relative;
   overflow: hidden;
@@ -46,7 +47,7 @@
     font-weight: 500;
     line-height: 1.2;
     padding: 5px;
-    color: #FFFFFF;
+    color: $colorSecondary;
     position: absolute;    
     bottom: 5px;
     text-align: left;
