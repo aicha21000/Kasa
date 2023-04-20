@@ -5,6 +5,7 @@ import Rating from "../../components/Rating";
 import Tags from "../../components/Tags";
 import Drop from "../../components/Dropdown";
 import "./_index.scss";
+import logements from"../../assets/data/logements.json"
 
 function Card() {
   const { logName } = useParams();
@@ -12,7 +13,6 @@ function Card() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const logements = require("../../assets/data/logements.json");
     const foundLogement = logements.find(
       (logement) => logement.id === logName
     );

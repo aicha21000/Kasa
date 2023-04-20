@@ -4,13 +4,14 @@ import CardsDisplay from "../../components/CardsDisplay";
 import { useState, useEffect } from "react";
 import image from "../../assets/images/banner.png";
 import "./_index.scss";
+import logements from"../../assets/data/logements.json"
 
 function Home() {
   const text = "Chez vous, partout et ailleurs";
   const [logement, setLogement] = useState(null);
 
   useEffect(() => {
-    const logements = require("../../assets/data/logements.json");
+
     setLogement(logements);
   }, []);
 
