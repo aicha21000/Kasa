@@ -6,7 +6,6 @@ import Tags from "../../components/Tags";
 import Drop from "../../components/Dropdown";
 import "./_index.scss";
 
-
 function Card() {
   const { logName } = useParams();
   const [logement, setLogement] = useState(null);
@@ -17,11 +16,14 @@ function Card() {
     const foundLogement = logements.find(
       (logement) => logement.id === logName
     );
-    setLogement(foundLogement);
-  }, [logName]);
+    if (!foundLogement) {
+      navigate("/error");
+    } else {
+      setLogement(foundLogement);
+    }
+  }, [logName, navigate]);
 
   if (!logement) {
-    navigate("/error");
     return null;
   }
 
@@ -38,14 +40,12 @@ function Card() {
         <div className="cardTags">
           <Tags tags={tags} />
         </div>
-
       </div>
       <div className="hostRate">
         <div className="cardHost">
           <p>{host.name}</p>
           <img src={host.picture} alt="imageHost"></img>
         </div>
-
         <div className="cardRating">
           <Rating rating={rating} />
         </div>

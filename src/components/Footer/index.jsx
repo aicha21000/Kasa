@@ -4,7 +4,7 @@ import './_index.scss';
 function Footer() {
   return (
     <div className='footerDiv'>
-      <img src={LOGO} alt='LogoImage' />
+      <img src={LOGO} alt='Kasa Logo' />
       <p>© 2020 Kasa. All rights reserved</p>
     </div>
   )

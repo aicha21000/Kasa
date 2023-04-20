@@ -12,7 +12,7 @@ function Drop({ label, contentLabel }) {
     return (
         <div className='dropdownDiv'>
             <div className="dropdown-header" onClick={toggleDropdown}>
-                <h3>{label}</h3>{isOpen ? <Open className="open" /> : <Close className="close" />}
+                <h3>{label}</h3>{isOpen ? <Open className="open" aria-label="onglet ouvert"/> : <Close className="close" aria-label="onglet fermé"/>}
             </div>
             {isOpen && <div className="dropdown-description"><div className='description-text'>{contentLabel}</div></div>}
         </div>

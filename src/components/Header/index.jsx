@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
 import LOGO from "../../assets/images/LOGO.svg";
-import './_index.scss'
+import './_index.scss';
 
 function Header() {
-  const handleClick = () => {
-    window.location.href = "/";
-  };
   return (
     <div className='headerContainer'>
       <div className='logo'>
-        <img src={LOGO} alt="logo" onClick={handleClick} />
+        <Link to="/">
+          <img src={LOGO} alt="logo" />
+        </Link>
       </div>
       <nav>
         <ul>
@@ -24,4 +23,5 @@ function Header() {
     </div>
   )
 }
-export default Header
+
+export default Header;

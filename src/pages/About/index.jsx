@@ -10,6 +10,7 @@ const About = () => {
   return (
     <div className='container'>
       <Banner image={image} />
+      <div className='dropdownWrapper'>
       <div className='dropdownDiv'>
         {data.map((element, index) => (
           <Drop
@@ -19,7 +20,7 @@ const About = () => {
           />
         ))
         }
-      </div>
+      </div></div>
     </div>
   )
 }
