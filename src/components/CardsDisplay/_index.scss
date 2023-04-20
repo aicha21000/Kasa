@@ -6,7 +6,7 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: end;
-  justify-content: center;
+  justify-content: start;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -40,21 +40,21 @@
   }
 
   h2 { 
-    width: 90%;    
-    height: 52px;
+    width: 60%;    
     z-index: 2;
-    font-size: 1.2vw;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.2;
-    padding: 5px;
+    padding: 0 0px 0 20px;
     color: $colorSecondary;
     position: absolute;    
-    bottom: 5px;
+    bottom: 40px;
     text-align: left;
     margin: 0;
     @media screen and (max-width: 768px) {
       font-size: 18px;
       line-height: 24px;
+      width: 90%;  
     }
   }
 }
