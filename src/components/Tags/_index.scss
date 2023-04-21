@@ -24,14 +24,14 @@
         font-weight: 500;
         
         min-width: 115px;
-        height: 25px;
+        padding: 5px;
         overflow: hidden;
         text-align: center;
         justify-content: center;
         padding: 5px;
         @media screen and (max-width: 768px) {
             width: 100px;
-            height: 20px;
+            padding: 5px;            
             font-size: 10px;
             line-height: 16.8px;
         }
