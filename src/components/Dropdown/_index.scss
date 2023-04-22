@@ -31,12 +31,18 @@
   z-index: 2;
   @media screen and (max-width: 768px) {
     font-size: 13px;
+    height: 29.93px;
+    border-radius: 5px;
   }
   
   
 
   h3 {
   padding: 0 10px;
+  font-size: 18px;
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
 }
 }
 
@@ -59,6 +65,7 @@
   line-height: 25.67px;
   @media screen and (max-width: 768px) {
     height: auto;
+    font-size: 12px;
   }
    
   
@@ -72,8 +79,10 @@
     li {
       font-size: 18px;
       list-style: none;
+      padding: 0;
       @media screen and (max-width: 768px) {
         font-size: 12px;
+        padding: 0;
       }
         
       
@@ -82,17 +91,18 @@
   }
 }
 
-.open {
-  width: 20px;
-  height: 20px;
+.open, .close {
+  width: 24px;
+  height: 24px;
   margin: 0 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 16px;
+    height: 16px;
+  }
 }
 
-.close {
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
-}
+
 
 .description-text {
   padding: 10px;

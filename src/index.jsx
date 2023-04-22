@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import About from './pages/About'
@@ -10,7 +10,9 @@ import Error from './pages/Error'
 import './utils/GlobalStyle/main.scss'
 import './utils/GlobalStyle/normalize.css'
 import './utils/GlobalStyle/variables.scss'
-ReactDOM.render(
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
@@ -22,7 +24,5 @@ ReactDOM.render(
       </Routes>
       <Footer />
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
-
+  </React.StrictMode>
+);
