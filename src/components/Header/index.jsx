@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import LOGO from "../../assets/images/LOGO.svg";
 import './_index.scss';
 
@@ -13,10 +13,11 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+          <NavLink  to="/" activeclassname="active">Accueil</NavLink>
+
           </li>
           <li>
-            <Link to="/about">A Propos</Link>
+          <NavLink to="/about" activeclassname="active">A Propos</NavLink>
           </li>
         </ul>
       </nav>

@@ -11,3 +11,8 @@
     }
 
     }
+
+    li a:hover,
+    li a.active {
+  text-decoration: underline !important;
+}

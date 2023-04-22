@@ -10,10 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-padding: 20px 100px;
+  padding: 20px 100px;
   @media screen and (max-width: 768px) {
       padding: 20px;
-  }
+  }}
 
 nav {
   float: right;
@@ -43,9 +43,14 @@ li {
 li a {
   text-decoration: none;
   color: $colorPrimary;
+  .activeLink{
+    text-decoration: underline !important;
+    color: red !important;
+  }
+  
 }
 
-li a:hover {
-  text-decoration: underline;
+li a:hover{
+  text-decoration: underline 
 }
-}
+
